@@ -24,13 +24,16 @@ bash <(wget -qO- https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 bash <(wget -qO- https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh)
 ```
 
-### install
+### Install and set up environment
 
 ```bash
 conda env create -f selenium.yml
+
+conda activate selenium
 ```
 
-##Download Gecko webdriver (For Firefox)
+
+## Download Gecko webdriver (For Firefox)
 
 ```bash
 sudo apt install firefox-geckodriver
