@@ -48,3 +48,26 @@ and move it to:
 ```
 
 you might need sudo to do this
+
+
+# For Tutorial
+
+## Get started with Initial
+
+```bash
+git checkout initial
+git branch
+```
+## If you get lost, go to middle
+
+```bash
+git checkout middle
+git branch
+```
+
+## Final result will be on master
+
+```bash
+git checkout master
+git branch
+```
