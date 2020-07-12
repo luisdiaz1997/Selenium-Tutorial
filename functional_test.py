@@ -1,16 +1,26 @@
 from selenium import webdriver
+import unittest
 
-browser = webdriver.Firefox()
+class NewVisitorTest(unittest.TestCase):
 
-# Luis knows of this website and opens it
-browser.get('http://localhost:5000')
+    def setUp(self):
+        self.browser = webdriver.Firefox()
 
-# He checks the title says “Inventory”
-assert "Hello" in browser.title, "Title was " + browser.title
+    def tearDown(self):
+        self.browser.quit()
 
-# He adds a shirt and the number of shirts increases + 1
-# He changes the number of pants to 5
-# He changes the number of shirts back to zero and this says OUT-OF-STOCK
-# He checks the total inventory is the sum of all numbers (example 20)
+    def test_inventory(self):
+        # Luis knows of this website and opens it
+        self.browser.get('http://localhost:5000')
 
-browser.quit()
+        # He checks the title says “Inventory”
+        self.assertIn('Inventory', self.browser.title)
+
+        # He adds a shirt and the number of shirts increases + 1
+        # He changes the number of pants to 5
+        # He changes the number of shirts back to zero and this says OUT-OF-STOCK
+        # He checks the total inventory is the sum of all numbers (example 20)
+
+
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')

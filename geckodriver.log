@@ -51,3 +51,21 @@ console.error: services.settings:
 1594584565173	Marionette	WARN	TLS certificate errors will be ignored for this session
 1594584565289	Marionette	INFO	Stopped listening on port 35471
 console.warn: services.settings: main/cfr sync interrupted by shutdown
+1594586482324	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilej285nO"
+1594586483960	Marionette	INFO	Listening on port 46601
+1594586484028	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594586484152	Marionette	INFO	Stopped listening on port 46601
+1594586561310	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXZJbld"
+1594586562983	Marionette	INFO	Listening on port 38597
+1594586563014	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594586563127	Marionette	INFO	Stopped listening on port 38597
+1594586600716	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSfwRbO"
+1594586602310	Marionette	INFO	Listening on port 38253
+1594586602322	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594586602483	Marionette	INFO	Stopped listening on port 38253
+console.error: services.settings: 
+  main/cfr Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1594586616348	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2MJxzE"
+1594586618006	Marionette	INFO	Listening on port 42335
+1594586618052	Marionette	WARN	TLS certificate errors will be ignored for this session
+1594586618158	Marionette	INFO	Stopped listening on port 42335
