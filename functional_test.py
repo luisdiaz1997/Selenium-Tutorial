@@ -6,7 +6,7 @@ browser = webdriver.Firefox()
 browser.get('http://localhost:5000')
 
 # He checks the title says “Inventory”
-assert "Hello" in browser.title, "Title was " + browser.title
+assert "Inventory" in browser.title, "Title was " + browser.title
 
 # He adds a shirt and the number of shirts increases + 1
 # He changes the number of pants to 5
