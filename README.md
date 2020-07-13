@@ -32,24 +32,6 @@ conda env create -f selenium.yml
 conda activate selenium
 ```
 
-
-## Download Gecko webdriver (For Firefox)
-
-```bash
-sudo apt install firefox-geckodriver
-```
-
-Or download from this [website](https://github.com/mozilla/geckodriver/releases)
-
-and move it to:
-
-```bash
-/usr/local/bin
-```
-
-you might need sudo to do this
-
-
 # For Tutorial
 
 ## Get started with Initial
@@ -58,7 +40,7 @@ you might need sudo to do this
 git checkout initial
 git branch
 ```
-## If you get lost, go to middle
+## If you get lost, go to middle, middle 2 or middle3
 
 ```bash
 git checkout middle
