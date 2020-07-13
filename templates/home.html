@@ -2,10 +2,52 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SFSC</title>
+    <title>Inventory</title>
   </head>
   <body>
-    <p>Hello World</p>
+    <div id="app">
+      <ul>
+        <li v-for="product in products">
+          <input :id="product.name + '_quantity'"  type="number" v-model.number="product.quantity">
+          <span :id=product.name>
+            [[ product.name ]]
+            <span v-if="product.quantity === 0">
+  		       - OUT OF STOCK
+  		      </span>
+          </span>
+          <button :id="product.name + '_button'" @click="product.quantity++">
+			         Add
+		      </button>
+        </li>
+      </ul>
+
+      <h2>Total Inventory:
+        <span id="Total">[[totalProducts]]</span>
+      </h2>
+
+    </div>
+
 
   </body>
+  <script src ="http://unpkg.com/vue"></script>
+  <script>
+      const app = new Vue({
+          el: '#app',
+          delimiters: ['[[', ']]'],
+          data: {
+              products: [
+                  {"id":1, "quantity":1, "name":"Shirt"},
+                  {"id":2, "quantity":1, "name":"Pant"},
+                  {"id":3, "quantity":5, "name":"Jacket"}
+                  ]},
+          computed: {
+              totalProducts () {
+                return this.products.reduce((sum, product) =>{
+                  return sum + product.quantity
+                },0)
+              }
+            }
+        })
+  </script>
+
 </html>
