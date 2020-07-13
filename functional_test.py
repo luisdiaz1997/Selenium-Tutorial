@@ -1,5 +1,6 @@
 from selenium import webdriver
 import unittest
+import time
 
 class NewVisitorTest(unittest.TestCase):
 
@@ -15,8 +16,10 @@ class NewVisitorTest(unittest.TestCase):
 
         # He checks the title says “Inventory”
         self.assertIn('Inventory', self.browser.title)
+        time.sleep(1)
 
-        # He adds a shirt and the number of shirts increases + 1
+        # He presses the add button on shirts
+        # Number of shirts increases by one
         # He changes the number of pants to 5
         # He changes the number of shirts back to zero and this says OUT-OF-STOCK
         # He checks the total inventory is the sum of all numbers (example 20)

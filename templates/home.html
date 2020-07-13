@@ -5,26 +5,25 @@
     <title>Inventory</title>
   </head>
   <body>
-    <p>Hello World</p>
+    <div id="app">
+      <ul>
+        <li v-for="product in products">
+          [[ product.name ]] [[ product.quantity ]]
+        </li>
+    </div>
 
   </body>
   <script src ="http://unpkg.com/vue"></script>
   <script>
       const app = new Vue({
           el: '#app',
+          delimiters: ['[[', ']]'],
           data: {
               products: [
                   {"id":1, "quantity":1, "name":"Shirt"},
                   {"id":2, "quantity":1, "name":"Pant"},
                   {"id":3, "quantity":5, "name":"Jacket"}
-                  ]},
-          computed: {
-              totalProducts () {
-                return this.products.reduce((sum, product) =>{
-                  return sum + product.quantity
-                },0)
-              }
-            }
+                  ]}
         })
   </script>
 
