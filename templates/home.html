@@ -2,10 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SFSC</title>
+    <title>Hello</title>
   </head>
   <body>
-    <p>Hello World</p>
+    <div id="app">
+      <h1> Hello World </h1>
+    </div>
 
   </body>
+  <script src ="http://unpkg.com/vue"></script>
+  <script>
+      const app = new Vue({
+          el: '#app',
+          delimiters: ['[[', ']]'],
+          data: {
+              products: [
+                  {"id":1, "quantity":1, "name":"Shirt"},
+                  {"id":2, "quantity":1, "name":"Pant"},
+                  {"id":3, "quantity":5, "name":"Jacket"}
+                  ]}
+        })
+  </script>
+
 </html>
