@@ -1,6 +1,7 @@
 from selenium import webdriver
+from webdriver_manager.firefox import GeckoDriverManager
 
-browser = webdriver.Firefox()
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
 # Luis knows of this website and opens it
 browser.get('http://localhost:5000')
