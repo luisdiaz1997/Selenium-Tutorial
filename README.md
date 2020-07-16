@@ -15,7 +15,7 @@ https://docs.conda.io/en/latest/miniconda.html
 ### For Linux
 
 ```bash
-bash <(wget -qO- https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh)
+wget -O - https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash
 ```
 
 ### For Mac
